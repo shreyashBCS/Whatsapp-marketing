@@ -2,22 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import logo2 from '../assets/logo2-removebg-preview.png'
+import logo2 from '../assets/new_logo_3-removebg-preview.png'
+import avatar from '../assets/avatar2.png'
+
+
+
 
 const Sidebar = () => {
     return (
         <>
-            <div className='bg-warning h-80 w-full'>
+            <div className='bg-warning h-80 w-full d-flex justify-content-between'>
                 <img
                     src={logo2}
                     alt='logo'
-                    style={{ width: '170px', height: '50px', marginBottom: "0px", display: "block" }} // Adjust margin as needed
+                    style={{ width: '150px', height: '50px', display: "block" }}
                 />
-            </div>
+                <img
+                    src={avatar}
+                    alt="second logo"
+                    style={{ width: '70px', height: '50px', display: "block", marginRight: "24px" }}
+                />
 
+            </div>
+            {/* ----------------------------------------------------------------------------------------------- */}
             <div style={{ backgroundColor: '#018B96', borderRadius: 4, width: "240px", height: "100vh", position: "fixed", top: 0, left: 0, zIndex: 1000, padding: 0, marginTop: "51px" }}>
                 <div className="p-3" style={{ padding: 0, margin: 0 }}>
-                    {/* <img src={logo} alt='logo'  style={{ width: '150px', height: '150px',marginTop:'0.1px' }} /> */}
 
                     <Nav defaultActiveKey="/home" className="flex-column">
                         <Nav.Link as={Link} to="/emailmanagement" className="text-white hover-white" style={{ marginTop: "0px" }}>Email Management </Nav.Link>
@@ -27,6 +36,7 @@ const Sidebar = () => {
                     </Nav>
                 </div>
             </div>
+
         </>
     );
 };

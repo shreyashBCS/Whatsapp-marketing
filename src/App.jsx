@@ -12,7 +12,7 @@ function App() {
       <Sidebar />
       <div style={{ marginLeft: '290px' }}> {/* Adjust margin based on sidebar width */}
         <Routes>
-          <Route path="/" element={<Sidebar />} />
+          {/* <Route path="/" element={<Sidebar />} /> */}
           <Route path='/emailmanagement' element={<EmailMgmt />} />
           <Route path='/slackmsg' element={<SlackMsg />} />
           <Route path='/whatsappcampaign' element={<Whatsapp />} />
